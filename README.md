@@ -58,4 +58,3 @@ node server.js
 Server will start at `http://localhost:5000`
 
 ### 3️⃣ Frontend Setup (Vite + React)
-💡 **Happy Coding!** 🚀
