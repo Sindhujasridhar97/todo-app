@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@600&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f3f2f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.app-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  color: #673ab7;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main-content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.task-section {
+  flex: 2;
+  margin-right: 20px;
+}
+
+.add-task {
+  display: flex;
+  margin-bottom: 20px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.add-task input {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.add-task .react-datepicker__input-container {
+  flex: 1;
+}
+
+.add-task button {
+  padding: 15px 25px;
+  background-color: #673ab7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1rem;
+}
+
+.add-task button:hover {
+  background-color: #5e35b1;
+  transform: scale(1.05);
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.task-item:hover {
+  background-color: #f9f9f9;
+  transform: scale(1.02);
+}
+
+.task-text {
+  flex: 1;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.due-date {
+  margin-right: 10px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.calendar-icon {
+  margin-right: 10px;
+}
+
+.edit-btn, .complete-btn, .delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+  margin-right: 5px;
+  font-size: 1.2rem;
+}
+
+.edit-btn {
+  color: #673ab7;
+}
+
+.edit-btn:hover {
+  color: #5e35b1;
+  transform: scale(1.2);
+}
+
+.complete-btn {
+  color: #4caf50;
+}
+
+.complete-btn:hover {
+  color: #43a047;
+  transform: scale(1.2);
+}
+
+.delete-btn {
+  color: #e91e63;
+}
+
+.delete-btn:hover {
+  color: #d81b60;
+  transform: scale(1.2);
+}
+
+.calendar-section {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 290px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.calendar-cell {
+  position: relative;
+}
+
+.upcoming {
+  background-color: #e8eaf6; /* Light violet for upcoming tasks */
+}
+
+.completed {
+  background-color: #c8e6c9; /* Light green for completed tasks */
+}
+
+.overdue {
+  background-color: #ffcdc9; /* Light red for overdue tasks */
+}
+
+.task-details {
+  width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  animation: slideInRight 0.5s ease-in-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.task-details h2 {
+  margin-top: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #673ab7;
+}
+
+.task-details input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.task-details button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1rem;
+}
+
+.delete-task {
+  background-color: #e91e63;
+  color: #fff;
+}
+
+.delete-task:hover {
+  background-color: #d81b60;
+  transform: scale(1.05);
+}
+
+.save-task {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.save-task:hover {
+  background-color: #43a047;
+  transform: scale(1.05);
+}
+
+.completed-tasks {
+  margin-top: 20px;
+}
+
+.completed-tasks h2 {
+  font-size: 1.5rem;
+  color: #673ab7;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.app-footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #673ab7;
+  color: #fff;
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0;
+}
+
+/* Additional styles for the calendar */
+.react-calendar {
+  width: 100%;
+  height: max-content;
+  max-width: 350px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.react-calendar__navigation button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.react-calendar__navigation button:hover {
+  color: #673ab7;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #e91e63;
+}
+
+.react-calendar__tile--active {
+  background-color: #673ab7;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.react-calendar__tile--active:hover {
+  background-color: #5e35b1;
+}
