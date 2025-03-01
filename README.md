@@ -32,7 +32,7 @@ todo-app/
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/yourusername/mern-todo-app.git
+git clone https://github.com/sindhujasriddhar97/todo-app.git
 cd mern-todo-app
 ```
 
