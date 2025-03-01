@@ -1,12 +1,17 @@
-# React + Vite
+To-Do Web App
+This is a To-Do web application built using the MERN stack. The frontend files are provided as they are, while the backend files are organized within a separate folder.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tech Stack
+- MongoDB Atlas (Cloud Database)
+- Express.js (Backend Framework)
+- React.js (Frontend Library)
+- Node.js (Runtime Environment)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Project Structure
+todolistapp
+- frontend   # Contains React.js frontend files
+- backend    # Contains Node.js and Express backend files
+- README.md   # Project Documentation
+- package.json
+- .gitignore
+  
